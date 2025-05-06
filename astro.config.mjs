@@ -44,9 +44,10 @@ import { remarkReadingTime } from './src/utils/readTime.ts';
 import { siteConfig } from './src/data/site.config';
 
 // https://astro.build/config
+const base = '/Web_Bot_Blog';
 export default defineConfig({
-    site: siteConfig.site,
-    base: process.env.NODE_ENV === 'production' ? '/Web_Bot_Blog' : '', // Thêm dòng này
+    site: 'https://681a19997868633cb26aebb8--cozy-mousse-206797.netlify.app/',
+    base: process.env.NODE_ENV === 'production' ? '' : '',
     markdown: {
         remarkPlugins: [remarkReadingTime],
         drafts: true,
