@@ -4,7 +4,6 @@ import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import { remarkReadingTime } from './src/utils/readTime.ts'
 import { siteConfig } from './src/data/site.config'
-import preact from '@astrojs/preact';
 
 // https://astro.build/config
 export default defineConfig({
