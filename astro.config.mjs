@@ -45,7 +45,7 @@ import { siteConfig } from './src/data/site.config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://681a19997868633cb26aebb8--cozy-mousse-206797.netlify.app/',
+    site: 'https://dashing-kringle-49c2a1.netlify.app/',
     base: process.env.NODE_ENV === 'production' ? '/Web_Bot_Blog/' : '',
     markdown: {
         remarkPlugins: [remarkReadingTime],
