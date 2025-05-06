@@ -8,7 +8,6 @@ import { siteConfig } from './src/data/site.config'
 // https://astro.build/config
 export default defineConfig({
 	site: siteConfig.site,
-	base: '/Web_Bot_Blog/',
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
 		drafts: true,
