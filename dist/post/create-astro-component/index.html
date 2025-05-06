@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" class="scroll-smooth" data-astro-cid-37fxchfa> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.0.8"><!-- Canonical URL --><link rel="canonical" href="https://681a19997868633cb26aebb8--cozy-mousse-206797.netlify.app/Web_Bot_Blog/post/create-astro-component/"><!-- Primary Meta Tags --><title>Tutorial: Create an Astro Component • Astro Theme OpenBlog</title><!-- ViewTransitions  --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><!-- SEO --><meta name="title" content="Tutorial: Create an Astro Component • Astro Theme OpenBlog"><meta name="description" content="Learn how to create your first Astro component."><meta name="author" content="Your Name"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://681a19997868633cb26aebb8--cozy-mousse-206797.netlify.app/Web_Bot_Blog/post/create-astro-component/"><meta property="og:title" content="Tutorial: Create an Astro Component"><meta property="og:description" content="Learn how to create your first Astro component."><meta property="og:image" content="https://681a19997868633cb26aebb8--cozy-mousse-206797.netlify.app/Web_Bot_Blog/_astro/placeholder-hero.ZqYaJ2Hs.jpg"><meta property="article:author" content="Your Name"><meta property="article:published_time" content="2022-07-01T17:00:00.000Z"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://681a19997868633cb26aebb8--cozy-mousse-206797.netlify.app/Web_Bot_Blog/post/create-astro-component/"><meta property="twitter:title" content="Tutorial: Create an Astro Component"><meta property="twitter:description" content="Learn how to create your first Astro component."><meta property="twitter:image" content="https://681a19997868633cb26aebb8--cozy-mousse-206797.netlify.app/Web_Bot_Blog/_astro/placeholder-hero.ZqYaJ2Hs.jpg"><!-- RSS auto-discovery --><link rel="alternate" type="application/rss+xml" title="Astro Theme OpenBlog" href="/rss.xml"><link as="font" crossorigin rel="preload" href="/fonts/Manrope-Bold.woff2" type="font/woff2"><style>@font-face {font-weight: 200;font-style: normal;font-family: Manrope;font-display: swap;src: url(/fonts/Manrope-ExtraLight.woff2)}</style><style>@font-face {font-weight: 300;font-style: normal;font-family: Manrope;font-display: swap;src: url(/fonts/Manrope-Light.woff2)}</style><style>@font-face {font-weight: 400;font-style: normal;font-family: Manrope;font-display: swap;src: url(/fonts/Manrope-Regular.woff2)}</style><style>@font-face {font-weight: 500;font-style: normal;font-family: Manrope;font-display: swap;src: url(/fonts/Manrope-Medium.woff2)}</style><style>@font-face {font-weight: 600;font-style: normal;font-family: Manrope;font-display: swap;src: url(/fonts/Manrope-SemiBold.woff2)}</style><style>@font-face {font-weight: 700;font-style: normal;font-family: Manrope;font-display: swap;src: url(/fonts/Manrope-Bold.woff2)}</style><style>@font-face {font-weight: 800;font-style: normal;font-family: Manrope;font-display: swap;src: url(/fonts/Manrope-ExtraBold.woff2)}</style><style>@font-face { font-family: _font_fallback_1746542546863; size-adjust: 103.76%; src: local('Arial'); ascent-override: 102.74%; descent-override: 28.91%; line-gap-override: 0.00%; }</style><script>
+<!DOCTYPE html><html lang="en" class="scroll-smooth" data-astro-cid-37fxchfa> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.0.8"><!-- Canonical URL --><link rel="canonical" href="https://681a19997868633cb26aebb8--cozy-mousse-206797.netlify.app/Web_Bot_Blog/post/create-astro-component/"><!-- Primary Meta Tags --><title>Tutorial: Create an Astro Component • Astro Theme OpenBlog</title><!-- ViewTransitions  --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><!-- SEO --><meta name="title" content="Tutorial: Create an Astro Component • Astro Theme OpenBlog"><meta name="description" content="Learn how to create your first Astro component."><meta name="author" content="Your Name"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://681a19997868633cb26aebb8--cozy-mousse-206797.netlify.app/Web_Bot_Blog/post/create-astro-component/"><meta property="og:title" content="Tutorial: Create an Astro Component"><meta property="og:description" content="Learn how to create your first Astro component."><meta property="og:image" content="https://681a19997868633cb26aebb8--cozy-mousse-206797.netlify.app/Web_Bot_Blog/_astro/placeholder-hero.ZqYaJ2Hs.jpg"><meta property="article:author" content="Your Name"><meta property="article:published_time" content="2022-07-01T17:00:00.000Z"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://681a19997868633cb26aebb8--cozy-mousse-206797.netlify.app/Web_Bot_Blog/post/create-astro-component/"><meta property="twitter:title" content="Tutorial: Create an Astro Component"><meta property="twitter:description" content="Learn how to create your first Astro component."><meta property="twitter:image" content="https://681a19997868633cb26aebb8--cozy-mousse-206797.netlify.app/Web_Bot_Blog/_astro/placeholder-hero.ZqYaJ2Hs.jpg"><!-- RSS auto-discovery --><link rel="alternate" type="application/rss+xml" title="Astro Theme OpenBlog" href="/rss.xml"><link as="font" crossorigin rel="preload" href="/fonts/Manrope-Bold.woff2" type="font/woff2"><style>@font-face {font-weight: 200;font-style: normal;font-family: Manrope;font-display: swap;src: url(/fonts/Manrope-ExtraLight.woff2)}</style><style>@font-face {font-weight: 300;font-style: normal;font-family: Manrope;font-display: swap;src: url(/fonts/Manrope-Light.woff2)}</style><style>@font-face {font-weight: 400;font-style: normal;font-family: Manrope;font-display: swap;src: url(/fonts/Manrope-Regular.woff2)}</style><style>@font-face {font-weight: 500;font-style: normal;font-family: Manrope;font-display: swap;src: url(/fonts/Manrope-Medium.woff2)}</style><style>@font-face {font-weight: 600;font-style: normal;font-family: Manrope;font-display: swap;src: url(/fonts/Manrope-SemiBold.woff2)}</style><style>@font-face {font-weight: 700;font-style: normal;font-family: Manrope;font-display: swap;src: url(/fonts/Manrope-Bold.woff2)}</style><style>@font-face {font-weight: 800;font-style: normal;font-family: Manrope;font-display: swap;src: url(/fonts/Manrope-ExtraBold.woff2)}</style><style>@font-face { font-family: _font_fallback_1746542791159; size-adjust: 103.76%; src: local('Arial'); ascent-override: 102.74%; descent-override: 28.91%; line-gap-override: 0.00%; }</style><script>
 	function getTheme() {
 		const storedTheme = typeof localStorage !== 'undefined' && localStorage.getItem('theme')
 
@@ -31,7 +31,7 @@
 		localStorage.setItem('animations', 'false')
 	}
 </script><link rel="stylesheet" href="/Web_Bot_Blog/_astro/_page_.BV8_brAG.css" />
-<link rel="stylesheet" href="/Web_Bot_Blog/_astro/_slug_.B8SB8q6n.css" /><script type="module" src="/Web_Bot_Blog/_astro/hoisted.B7eI4YtJ.js"></script></head> <body class="bg-white text-stone-950 dark:bg-[#0a0910] dark:text-white" data-astro-cid-37fxchfa> <main class="px-5 sm:mx-auto sm:max-w-2xl sm:px-8 lg:px-0 antialiased md:max-w-6xl grid gap-12 mt-4 overflow-hidden md:overflow-visible" data-astro-cid-37fxchfa> <header class="relative flex items-center h-12 font-semibold"> <a class="text-lg mr-auto" href="/">Home</a> <div id="astro-header-drawer" class="shadow rounded-l-lg md:bg-transparent dark:md:bg-transparent bg-white dark:bg-[#0a0910] md:shadow-none md:rounded-none md:border-none md:h-auto md:static absolute transition-transform duration-300 ease-in translate-x-96 md:translate-x-0 top-12 -right-5 pl-4 pt-6 pb-4 md:p-0 h-[200px] w-[200px] z-50"> <nav class="flex h-full flex-col justify-between gap-12 text-left md:flex-row md:w-full md:gap-5"> <div class="flex flex-col gap-4 md:flex-row md:border-r-2 border-black pr-4 dark:border-white"> <a href="/tags" class="text-opacity-60 flex items-center gap-1 text-2xl md:text-base" rel="noopener noreferrer ">  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 md:w-6" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M7.859 6h-2.834a2.025 2.025 0 0 0 -2.025 2.025v2.834c0 .537 .213 1.052 .593 1.432l6.116 6.116a2.025 2.025 0 0 0 2.864 0l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-6.117 -6.116a2.025 2.025 0 0 0 -1.431 -.593z"></path> <path d="M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116"></path> <path d="M6 9h-.01"></path> </svg> Tags
+<link rel="stylesheet" href="/Web_Bot_Blog/_astro/_slug_.B8SB8q6n.css" /><script type="module" src="/Web_Bot_Blog/_astro/hoisted.DE_Dc3O8.js"></script></head> <body class="bg-white text-stone-950 dark:bg-[#0a0910] dark:text-white" data-astro-cid-37fxchfa> <main class="px-5 sm:mx-auto sm:max-w-2xl sm:px-8 lg:px-0 antialiased md:max-w-6xl grid gap-12 mt-4 overflow-hidden md:overflow-visible" data-astro-cid-37fxchfa> <header class="relative flex items-center h-12 font-semibold"> <a class="text-lg mr-auto" href="/">Home</a> <div id="astro-header-drawer" class="shadow rounded-l-lg md:bg-transparent dark:md:bg-transparent bg-white dark:bg-[#0a0910] md:shadow-none md:rounded-none md:border-none md:h-auto md:static absolute transition-transform duration-300 ease-in translate-x-96 md:translate-x-0 top-12 -right-5 pl-4 pt-6 pb-4 md:p-0 h-[200px] w-[200px] z-50"> <nav class="flex h-full flex-col justify-between gap-12 text-left md:flex-row md:w-full md:gap-5"> <div class="flex flex-col gap-4 md:flex-row md:border-r-2 border-black pr-4 dark:border-white"> <a href="/tags" class="text-opacity-60 flex items-center gap-1 text-2xl md:text-base" rel="noopener noreferrer ">  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 md:w-6" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M7.859 6h-2.834a2.025 2.025 0 0 0 -2.025 2.025v2.834c0 .537 .213 1.052 .593 1.432l6.116 6.116a2.025 2.025 0 0 0 2.864 0l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-6.117 -6.116a2.025 2.025 0 0 0 -1.431 -.593z"></path> <path d="M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116"></path> <path d="M6 9h-.01"></path> </svg> Tags
  </a> </div> <div class="flex justify-center items-center md:justify-end gap-3 md:p-0"> <a href="https://github.com/danielcgilibert/blog-template" class="text-opacity-60" rel="noopener noreferrer " target="_blank" aria-label="Github">  <span><svg xmlns="http://www.w3.org/2000/svg" class="w-8 md:w-6" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path> </svg> </span>  </a><a href="https://github.com/danielcgilibert/blog-template" class="text-opacity-60" rel="noopener noreferrer " target="_blank" aria-label="Twitter">  <span><svg xmlns="http://www.w3.org/2000/svg" class="w-8 md:w-6" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path> </svg> </span>  </a> </div> </nav> </div> <div class="flex items-center gap-3 md:pl-3" data-astro-transition-persist="navbar"> <div> <site-search id="search" class="ms-auto"> <button data-open-modal disabled class="flex items-center justify-center rounded-md gap-1"> <svg aria-label="search" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"> <path stroke="none" d="M0 0h24v24H0z"></path> <path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6"></path> </svg> <!-- <span class='md:hidden text-2xl'> Search</span> --> </button> <dialog aria-label="search" class="h-full max-h-full w-full max-w-full border border-zinc-400 bg-white dark:bg-[#0a0910ec] shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md opacity-0"> <div class="dialog-frame flex flex-col gap-4 p-6 pt-12 sm:pt-6"> <button data-close-modal class="ms-auto cursor-pointer rounded-full bg-black text-white px-4 py-2 dark:bg-white dark:text-black">Close</button> <div class="search-container dark:text-white"> <div id="pagefind__search"></div> </div> </div> </dialog> </site-search>   </div>  <theme-toggle class="relative h-6 w-6"> <button id="toggle-theme" class="group" aria-label="Toggle Theme"> <span class="absolute left-0 right-0 top-0 opacity-0 group-aria-pressed:opacity-100"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun-high" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z"></path> <path d="M6.343 17.657l-1.414 1.414"></path> <path d="M6.343 6.343l-1.414 -1.414"></path> <path d="M17.657 6.343l1.414 -1.414"></path> <path d="M17.657 17.657l1.414 1.414"></path> <path d="M4 12h-2"></path> <path d="M12 4v-2"></path> <path d="M20 12h2"></path> <path d="M12 20v2"></path> </svg> </span> <span class="absolute left-0 right-0 top-0 opacity-0 group-aria-[pressed=false]:opacity-100"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path> </svg> </span> </button> </theme-toggle> <script>
 	const button = document.getElementById('toggle-theme')
 
@@ -92,123 +92,137 @@ For example, you can’t assign an event handler to an HTML element in an Astro 
 <span class="line"><span style="color:#B07D48;--shiki-dark:#BABED8">		console</span><span style="color:#999999;--shiki-dark:#89DDFF">.</span><span style="color:#59873A;--shiki-dark:#82AAFF">log</span><span style="color:#999999;--shiki-dark:#F07178">(</span><span style="color:#B5695999;--shiki-dark:#89DDFF">&#39;</span><span style="color:#B56959;--shiki-dark:#C3E88D">button clicked!</span><span style="color:#B5695999;--shiki-dark:#89DDFF">&#39;</span><span style="color:#999999;--shiki-dark:#F07178">)</span></span>
 <span class="line"><span style="color:#999999;--shiki-dark:#89DDFF">	}</span></span>
 <span class="line"><span style="color:#B07D48;--shiki-dark:#BABED8">	document</span><span style="color:#999999;--shiki-dark:#89DDFF">.</span><span style="color:#59873A;--shiki-dark:#82AAFF">getElementById</span><span style="color:#999999;--shiki-dark:#BABED8">(</span><span style="color:#B5695999;--shiki-dark:#89DDFF">&#39;</span><span style="color:#B56959;--shiki-dark:#C3E88D">button</span><span style="color:#B5695999;--shiki-dark:#89DDFF">&#39;</span><span style="color:#999999;--shiki-dark:#BABED8">)</span><span style="color:#999999;--shiki-dark:#89DDFF">.</span><span style="color:#59873A;--shiki-dark:#82AAFF">addEventListener</span><span style="color:#999999;--shiki-dark:#BABED8">(</span><span style="color:#B5695999;--shiki-dark:#89DDFF">&#39;</span><span style="color:#B56959;--shiki-dark:#C3E88D">click</span><span style="color:#B5695999;--shiki-dark:#89DDFF">&#39;</span><span style="color:#999999;--shiki-dark:#89DDFF">,</span><span style="color:#B07D48;--shiki-dark:#BABED8"> handleClick</span><span style="color:#999999;--shiki-dark:#BABED8">)</span></span>
-<span class="line"><span style="color:#999999;--shiki-dark:#89DDFF">&lt;/</span><span style="color:#1E754F;--shiki-dark:#F07178">script</span><span style="color:#999999;--shiki-dark:#89DDFF">&gt;</span></span></code></pre>  </div> <!-- related posts --> <footer> <h2 class="font-bold text-lg dark:text-white mb-6">Related Posts</h2> <section class="flex flex-col md:flex-row sm:justify-between gap-8"> <div class="flex flex-wrap gap-2"> <div class="min-h-full"> <img src="/Web_Bot_Blog/_astro/bg.BLmUMqKA_28oaps.webp" class="w-16 h-16 object-cover rounded-full  " alt="img of MacBook Pro 2022" width="200" height="200" loading="lazy" decoding="async"> </div> <header class="flex justify-center items-center"> <a class="font-medium  hover:underline" href="/post/astro-copy-2/"> MacBook Pro 2022 </a> </header> </div><div class="flex flex-wrap gap-2"> <div class="min-h-full"> <img src="/Web_Bot_Blog/_astro/te.DucztPaz_AtqCm.webp" class="w-16 h-16 object-cover rounded-full  " alt="img of Astro Components" width="200" height="200" loading="lazy" decoding="async"> </div> <header class="flex justify-center items-center"> <a class="font-medium  hover:underline" href="/post/astro-copy-3/"> Astro Components </a> </header> </div><div class="flex flex-wrap gap-2"> <div class="min-h-full"> <img src="/Web_Bot_Blog/_astro/banner.BelI91fy_qgO9d.webp" class="w-16 h-16 object-cover rounded-full  " alt="img of Components" width="200" height="200" loading="lazy" decoding="async"> </div> <header class="flex justify-center items-center"> <a class="font-medium  hover:underline" href="/post/astro-copy-4/"> Components </a> </header> </div> </section> </footer> </article> </div>  </div> </article>  <!-- ---
-import { getChatbotResponse } from '../utils/gemini'
-const initialMessageRaw = await getChatbotResponse('Say hello to our blog visitors!')
-const initialMessage = initialMessageRaw.replace(/! /g, '!<br />') // Ngắt câu sau dấu chấm than
----
-
-<div class='chatbot-wrapper fixed bottom-6 right-6 z-50'>
-	<button
-		class='chatbot-toggle-open hidden p-3 bg-blue-500 dark:bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors'
-		title='Open Chatbot'
-	>
-		💬
-	</button>
-	<div
-		class='chatbot hidden w-80 bg-white dark:bg-gray-900 shadow-lg rounded-lg p-4 transition-all duration-300'
-	>
-		<div class='flex justify-between items-center mb-3'>
-			<div class='chat-header font-bold text-base text-gray-900 dark:text-gray-100'>Chatbot</div>
-			<button
-				class='chatbot-toggle-close p-1 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors'
-				title='Close Chatbot'
-			>
-				✕
-			</button>
-		</div>
-		<div class='chat-messages h-64 overflow-y-auto mb-3 flex flex-col'>
-			<div class='message bot-message self-start max-w-[80%] mb-2'>
-				<div class='label text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1'>Bot</div>
-				<div
-					class='content p-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-lg font-medium'
-					set:html={initialMessage}
-				/>
-			</div>
-		</div>
-		<form id='chat-form' class='flex items-center gap-2'>
-			<input
-				type='text'
-				id='chat-input'
-				class='flex-1 py-1 px-2 text-sm border border-blue-200 dark:border-blue-800 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-700'
-				placeholder='Ask me anything...'
-			/>
-			<button
-				type='submit'
-				class='px-4 py-2 bg-white dark:bg-gray-800 text-blue-500 dark:text-blue-400 border border-blue-200 dark:border-blue-800 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900 transition-colors'
-				>Send</button
-			>
-		</form>
-	</div>
-</div>
-
-<script>
-	const chatbotWrapper = document.querySelector('.chatbot-wrapper')
-	const chatbot = document.querySelector('.chatbot')
-	const toggleOpen = document.querySelector('.chatbot-toggle-open')
-	const toggleClose = document.querySelector('.chatbot-toggle-close')
-	const form = document.getElementById('chat-form')
-	const input = document.getElementById('chat-input')
-	const messages = document.querySelector('.chat-messages')
-
-	// Initially show the chatbot and hide the open button
-	chatbot.classList.remove('hidden')
-	toggleOpen.classList.add('hidden')
-
-	// Toggle chatbot visibility
-	toggleOpen.addEventListener('click', () => {
-		chatbot.classList.remove('hidden')
-		toggleOpen.classList.add('hidden')
-	})
-
-	toggleClose.addEventListener('click', () => {
-		chatbot.classList.add('hidden')
-		toggleOpen.classList.remove('hidden')
-	})
-
-	// Chat form submission
-	form.addEventListener('submit', async (e) => {
-		e.preventDefault()
-		const userMessage = input.value.trim()
-		if (!userMessage) return
-
-		// Display user message
-		const userDiv = document.createElement('div')
-		userDiv.className = 'message user-message self-end max-w-[80%] mb-2'
-		userDiv.innerHTML = `
-      <div class="label text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1 text-right">You</div>
-      <div class="content p-2 bg-blue-200 dark:bg-blue-800 text-gray-800 dark:text-gray-200 rounded-lg">${userMessage}</div>
-    `
-		messages.appendChild(userDiv)
-
-		// Call Gemini API
-		const response = await fetch('/api/chat', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ prompt: userMessage })
-		})
-		const data = await response.json()
-
-		// Format bot response with breaks
-		const formattedResponse = data.response.replace(/! /g, '!<br />').replace(/\. /g, '.<br />')
-
-		// Display bot response
-		const botDiv = document.createElement('div')
-		botDiv.className = 'message bot-message self-start max-w-[80%] mb-2'
-		botDiv.innerHTML = `
-      <div class="label text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1">Bot</div>
-      <div class="content p-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-lg font-medium" style="white-space: pre-wrap;">${formattedResponse}</div>
-    `
-		messages.appendChild(botDiv)
-
-		// Clear input and scroll to bottom
-		input.value = ''
-		messages.scrollTop = messages.scrollHeight
-	})
-</script> --><div class="chatbot-wrapper fixed bottom-6 right-6 z-50"> <button class="chatbot-toggle-open hidden p-3 bg-blue-500 dark:bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors" title="Open Chatbot">
+<span class="line"><span style="color:#999999;--shiki-dark:#89DDFF">&lt;/</span><span style="color:#1E754F;--shiki-dark:#F07178">script</span><span style="color:#999999;--shiki-dark:#89DDFF">&gt;</span></span></code></pre>  </div> <!-- related posts --> <footer> <h2 class="font-bold text-lg dark:text-white mb-6">Related Posts</h2> <section class="flex flex-col md:flex-row sm:justify-between gap-8"> <div class="flex flex-wrap gap-2"> <div class="min-h-full"> <img src="/Web_Bot_Blog/_astro/bg.BLmUMqKA_28oaps.webp" class="w-16 h-16 object-cover rounded-full  " alt="img of MacBook Pro 2022" width="200" height="200" loading="lazy" decoding="async"> </div> <header class="flex justify-center items-center"> <a class="font-medium  hover:underline" href="/post/astro-copy-2/"> MacBook Pro 2022 </a> </header> </div><div class="flex flex-wrap gap-2"> <div class="min-h-full"> <img src="/Web_Bot_Blog/_astro/te.DucztPaz_AtqCm.webp" class="w-16 h-16 object-cover rounded-full  " alt="img of Astro Components" width="200" height="200" loading="lazy" decoding="async"> </div> <header class="flex justify-center items-center"> <a class="font-medium  hover:underline" href="/post/astro-copy-3/"> Astro Components </a> </header> </div><div class="flex flex-wrap gap-2"> <div class="min-h-full"> <img src="/Web_Bot_Blog/_astro/banner.BelI91fy_qgO9d.webp" class="w-16 h-16 object-cover rounded-full  " alt="img of Components" width="200" height="200" loading="lazy" decoding="async"> </div> <header class="flex justify-center items-center"> <a class="font-medium  hover:underline" href="/post/astro-copy-4/"> Components </a> </header> </div> </section> </footer> </article> </div>  </div> </article>  <div class="chatbot-wrapper fixed bottom-6 right-6 z-50"> <button class="chatbot-toggle-open hidden p-3 bg-blue-500 dark:bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors" title="Open Chatbot">
 💬
 </button> <div class="chatbot hidden w-80 bg-white dark:bg-gray-900 shadow-lg rounded-lg p-4 transition-all duration-300"> <div class="flex justify-between items-center mb-3"> <div class="chat-header font-bold text-base text-gray-900 dark:text-gray-100">Chatbot</div> <button class="chatbot-toggle-close p-1 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors" title="Close Chatbot">
 ✕
-</button> </div> <div id="chat-messages" class="chat-messages h-64 overflow-y-auto mb-3 flex flex-col"></div> <form id="chat-form" class="flex items-center gap-2"> <input type="text" id="chat-input" class="flex-1 py-1 px-2 text-sm border border-blue-200 dark:border-blue-800 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-700" placeholder="Ask me anything..."> <button type="submit" class="px-4 py-2 bg-white dark:bg-gray-800 text-blue-500 dark:text-blue-400 border border-blue-200 dark:border-blue-800 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900 transition-colors">Send</button> </form> </div> </div>  <footer class="flex justify-center items-center w-full px-16 h-28 border-t-2">
+</button> </div> <div class="chat-messages h-64 overflow-y-auto mb-3 flex flex-col"> <div class="message bot-message self-start max-w-[80%] mb-2"> <div class="label text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1">Bot</div> <div class="content p-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-lg font-medium">Hello everyone, and welcome to our blog!<br />We're so glad you're here.
+</div> </div> </div> <form id="chat-form" class="flex items-center gap-2"> <input type="text" id="chat-input" class="flex-1 py-1 px-2 text-sm border border-blue-200 dark:border-blue-800 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-700" placeholder="Ask me anything..."> <button type="submit" class="px-4 py-2 bg-white dark:bg-gray-800 text-blue-500 dark:text-blue-400 border border-blue-200 dark:border-blue-800 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900 transition-colors">Send</button> </form> </div> </div>  <!-- ---
+// Không cần import và gọi getChatbotResponse ở đây nữa
+---
+
+<div class='chatbot-wrapper fixed bottom-6 right-6 z-50'>
+    <button
+        class='chatbot-toggle-open hidden p-3 bg-blue-500 dark:bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors'
+        title='Open Chatbot'
+    >
+        💬
+    </button>
+    <div
+        class='chatbot hidden w-80 bg-white dark:bg-gray-900 shadow-lg rounded-lg p-4 transition-all duration-300'
+    >
+        <div class='flex justify-between items-center mb-3'>
+            <div class='chat-header font-bold text-base text-gray-900 dark:text-gray-100'>Chatbot</div>
+            <button
+                class='chatbot-toggle-close p-1 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors'
+                title='Close Chatbot'
+            >
+                ✕
+            </button>
+        </div>
+        <div id="chat-messages" class='chat-messages h-64 overflow-y-auto mb-3 flex flex-col'>
+            </div>
+        <form id='chat-form' class='flex items-center gap-2'>
+            <input
+                type='text'
+                id='chat-input'
+                class='flex-1 py-1 px-2 text-sm border border-blue-200 dark:border-blue-800 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-700'
+                placeholder='Ask me anything...'
+            />
+            <button
+                type='submit'
+                class='px-4 py-2 bg-white dark:bg-gray-800 text-blue-500 dark:text-blue-400 border border-blue-200 dark:border-blue-800 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900 transition-colors'
+                >Send</button
+            >
+        </form>
+    </div>
+</div>
+
+<script>
+    const chatbotWrapper = document.querySelector('.chatbot-wrapper')
+    const chatbot = document.querySelector('.chatbot')
+    const toggleOpen = document.querySelector('.chatbot-toggle-open')
+    const toggleClose = document.querySelector('.chatbot-toggle-close')
+    const form = document.getElementById('chat-form')
+    const input = document.getElementById('chat-input')
+    const messages = document.getElementById('chat-messages') // Lấy element bằng ID
+
+    // Initially show the chatbot and hide the open button
+    chatbot.classList.remove('hidden')
+    toggleOpen.classList.add('hidden')
+
+    // Toggle chatbot visibility
+    toggleOpen.addEventListener('click', () => {
+        chatbot.classList.remove('hidden')
+        toggleOpen.classList.add('hidden')
+    })
+
+    toggleClose.addEventListener('click', () => {
+        chatbot.classList.add('hidden')
+        toggleOpen.classList.remove('hidden')
+    })
+
+    // Function to display a message
+    function displayMessage(text, sender = 'bot') {
+        const messageDiv = document.createElement('div')
+        messageDiv.className = `message ${sender}-message self-${sender === 'bot' ? 'start' : 'end'} max-w-[80%] mb-2`
+        messageDiv.innerHTML = `
+            <div class="label text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1 text-${sender === 'bot' ? 'left' : 'right'}">${sender === 'bot' ? 'Bot' : 'You'}</div>
+            <div class="content p-2 bg-${sender === 'bot' ? 'gray-100 dark:bg-gray-800' : 'blue-200 dark:bg-blue-800'} text-gray-800 dark:text-gray-200 rounded-lg font-medium" style="white-space: pre-wrap;">${text.replace(/! /g, '!<br />').replace(/\. /g, '.<br />')}</div>
+        `
+        messages.appendChild(messageDiv)
+        messages.scrollTop = messages.scrollHeight
+    }
+
+    // Get initial bot message when the component loads
+    async function getInitialBotMessage() {
+        try {
+            const response = await fetch('/.netlify/functions/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ prompt: 'Say hello to our blog visitors!' })
+            })
+            const data = await response.json()
+            if (data && data.response) {
+                displayMessage(data.response, 'bot')
+            } else {
+                displayMessage('Hello!', 'bot') // Fallback message
+            }
+        } catch (error) {
+            console.error('Error fetching initial bot message:', error)
+            displayMessage('Sorry, I am unable to say hello right now.', 'bot') // Fallback error message
+        }
+    }
+
+    getInitialBotMessage()
+
+    // Chat form submission
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault()
+        const userMessage = input.value.trim()
+        if (!userMessage) return
+
+        displayMessage(userMessage, 'user')
+        input.value = '' // Clear input immediately after sending
+
+        // Call Netlify Function for user's message
+        try {
+            const response = await fetch('/.netlify/functions/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ prompt: userMessage })
+            })
+            const data = await response.json()
+            if (data && data.response) {
+                displayMessage(data.response, 'bot')
+            } else {
+                displayMessage('Sorry, I did not receive a response.', 'bot') // Fallback
+            }
+        } catch (error) {
+            console.error('Error calling chat function:', error)
+            displayMessage('Sorry, I encountered an error.', 'bot') // Fallback error message
+        }
+    })
+</script> --> <footer class="flex justify-center items-center w-full px-16 h-28 border-t-2">
 &copy; 2025 Your Name. All rights reserved.
 </footer> </main>    </body> </html> 
